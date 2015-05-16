@@ -30,4 +30,16 @@ angular.module('recruitr')
       $scope.moveForward = true;
     }
   });
+  $scope.editUser = function(user){
+    User.editUser(user)
+    .then(function(response){
+      $scope.users = response.data.users;
+    });
+  };
+  $scope.deleteUser = function(user){
+    User.deleteUser(user)
+    .then(function(response){
+      $scope.users = response.data.users;
+    });
+  };
 });

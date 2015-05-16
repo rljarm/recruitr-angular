@@ -76,5 +76,16 @@ angular.module('recruitr')
       $scope.moveForward = true;
     }
   });
-  console.log('in ProfilesListCtrl');
+  $scope.editStudent = function(student){
+    Profile.editStudent(student)
+    .then(function(response){
+      $scope.students = response.data.students;
+    });
+  };
+  $scope.deleteStudent = function(student){
+    Profile.deleteStudent(student)
+    .then(function(response){
+      $scope.students = response.data.students;
+    });
+  };
 });

@@ -9,16 +9,16 @@ h3 LIST PROFILES
             th Company
             th Email
             th User Type
-            th Edit
-            th Delete
+            th(ng-if='') Edit
+            th(ng-if='') Delete
         tbody
           tr(ng-repeat='user in users')
             td {{user.name}}
             td {{user.company}}
             td {{user.email}}
             td {{user.role}}
-            td: button.btn.btn-warning Edit
-            td: button.btn.btn-warning Delete
+            td(ng-if=''): button.btn.btn-warning(ng-click='editUser(user)') Edit
+            td(ng-if=''): button.btn.btn-warning(ng-click='deleteUser(user)') Delete
 .row
   .col-xs-1
     button.btn.btn-info(ng-show='moveBack', ng-click='changePage(prev)', ng-model='prev') Prev
