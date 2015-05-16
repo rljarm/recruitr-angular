@@ -3,6 +3,34 @@
 angular.module('recruitr')
 .constant('firebaseUrl', 'https://kolohelios-auth.firebaseio.com')
 .constant('nodeUrl', 'http://localhost:8000')
+.constant('fauxUsers',
+[
+  {
+    _id: 'b00000000000000000000001',
+    firebaseId: 'twitter:3',
+    createdAt: 1431541042952,
+    role: 'viewer'
+  },
+  {
+    _id: 'b00000000000000000000002',
+    firebaseId: 'facebook:5',
+    createdAt: 1431541109988,
+    role: 'viewer'
+  },
+  {
+    _id: 'b00000000000000000000003',
+    firebaseId: 'facebook:6',
+    createdAt: 1431541109988,
+    role: 'superviewer'
+  },
+  {
+    _id: 'b00000000000000000000004',
+    firebaseId: 'facebook:7',
+    createdAt: 1431541109988,
+    role: 'admin'
+  }
+]
+)
 .constant('fauxProfiles',
 [
   {
