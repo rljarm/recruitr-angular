@@ -13,7 +13,7 @@ h3 LIST PROFILES
             th(ng-if='') Delete
         tbody
           tr(ng-repeat='student in students')
-            td {{student.photo}}
+            td: img.photo(ng-src='{{student.photo}}')
             td {{student.firstName}}
             td {{student.skills.skill1}}
             td {{student.skills.skill2}}
