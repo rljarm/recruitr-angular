@@ -7,24 +7,36 @@ angular.module('recruitr')
 [
   {
     _id: 'b00000000000000000000001',
+    name: 'Dick Armstrong-Stoner',
+    company: 'Coding House',
+    email: 'rljarm@gmail.com',
     firebaseId: 'twitter:3',
     createdAt: 1431541042952,
     role: 'viewer'
   },
   {
     _id: 'b00000000000000000000002',
+    name: 'Jon Edwards',
+    company: 'Coding House',
+    email: 'jkedwards@me.com',
     firebaseId: 'facebook:5',
     createdAt: 1431541109988,
     role: 'viewer'
   },
   {
     _id: 'b00000000000000000000003',
+    name: 'Cris Oyler',
+    company: 'Coding House',
+    email: 'co@gmail.com',
     firebaseId: 'facebook:6',
     createdAt: 1431541109988,
     role: 'superviewer'
   },
   {
     _id: 'b00000000000000000000004',
+    name: 'Clyde Marl',
+    company: 'Coding House',
+    email: 'cm@gmail.com',
     firebaseId: 'facebook:7',
     createdAt: 1431541109988,
     role: 'admin'
