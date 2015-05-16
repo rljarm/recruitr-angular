@@ -25,6 +25,10 @@ angular.module('recruitr')
     return $rootScope.afAuth.$unauth();
   };
 
+  User.save = function(user){
+    return $http.post(nodeUrl + '/users', user);
+  };
+
   User.find = function(){
     // something here
   };

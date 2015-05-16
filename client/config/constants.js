@@ -7,30 +7,35 @@ angular.module('recruitr')
 [
   {
     _id: 'b00000000000000000000001',
-    firebaseId: 'twitter:3',
+    email: 'aaa@aaa.com',
+    password: 'aaa',
     createdAt: 1431541042952,
     role: 'viewer'
   },
   {
     _id: 'b00000000000000000000002',
-    firebaseId: 'facebook:5',
+    email: 'bbb@bbb.com',
+    password: 'bbb',
     createdAt: 1431541109988,
     role: 'viewer'
   },
   {
     _id: 'b00000000000000000000003',
-    firebaseId: 'facebook:6',
+    email: 'ccc@ccc.com',
+    password: 'ccc',
     createdAt: 1431541109988,
     role: 'superviewer'
   },
   {
     _id: 'b00000000000000000000004',
-    firebaseId: 'facebook:7',
+    email: 'ddd@ddd.com',
+    password: 'ddd',
     createdAt: 1431541109988,
     role: 'admin'
   }
 ]
 )
+
 .constant('fauxProfiles',
 [
   {

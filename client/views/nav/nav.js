@@ -25,7 +25,7 @@ angular.module('recruitr')
     if(data){
       $rootScope.activeUser = data;
       $rootScope.displayName = getDisplayName(data);
-      $http.defaults.headers.common.Authorization = 'Bearer ' + data.token;
+      $http.defaults.headers.common.Authorization = 'Bearer ' + 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6ImdpdGh1YjoxMTYzNDU4NSIsInByb3ZpZGVyIjoiZ2l0aHViIn0sImlhdCI6MTQzMTM2NzU4Nn0._IuW2klvx5rfm7reKHfYU09JPA8rANrwsfg0Re9GPBk';
       User.initialize().then(function(response){
         $rootScope.activeUser.mongoId = response.data;
         goHome();
