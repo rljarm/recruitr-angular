@@ -1,5 +1,5 @@
 'use strict';
 
-angular.module('poseidon')
-.constant('firebaseUrl', 'https://__________.firebaseio.com/')
+angular.module('recruitr')
+.constant('firebaseUrl', 'https://kolohelios-auth.firebaseio.com')
 .constant('nodeUrl', 'http://localhost:8000');

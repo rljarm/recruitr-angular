@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('poseidon')
-.controller('UsersCtrl', function($scope, $state, $window, User){
+angular.module('recruitr')
+.controller('LoginCtrl', function($scope, $state, $window, User){
   $scope.name = $state.current.name;
 
   $scope.oauth = function(provider){
