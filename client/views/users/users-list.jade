@@ -19,3 +19,9 @@ h3 LIST PROFILES
             td {{user.role}}
             td: button.btn.btn-warning Edit
             td: button.btn.btn-warning Delete
+.row
+  .col-xs-1
+    button.btn.btn-info(ng-show='', ng-click='changePage(prev)', ng-model='prev') Prev
+  .col-xs-10
+  .col-xs-1
+    button.btn.btn-info(ng-show='', ng-click='changePage(next)', ng-model='next') Next
