@@ -25,5 +25,9 @@ angular.module('recruitr')
     return $rootScope.afAuth.$unauth();
   };
 
+  User.find = function(){
+    // something here
+  };
+
   return User;
 });
