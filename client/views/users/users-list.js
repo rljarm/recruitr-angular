@@ -4,7 +4,7 @@ angular.module('recruitr')
 .controller('UsersListCtrl', function($scope, User){
   $scope.page = 1;
   $scope.moveBack = false;
-  $scope.moveForward = true;
+  $scope.moveForward = false;
   $scope.changePage = function(change){
     if(change === 'next' && $scope.users.length === 10){
       $scope.page += 1;
@@ -26,5 +26,8 @@ angular.module('recruitr')
   User.find()
   .then(function(response){
     $scope.users = response.data.users;
+    if($scope.users === 10){
+      $scope.moveForward = true;
+    }
   });
 });

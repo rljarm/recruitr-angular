@@ -48,7 +48,7 @@ angular.module('recruitr')
 ];
   $scope.page = 1;
   $scope.moveBack = false;
-  $scope.moveForward = true;
+  $scope.moveForward = false;
   $scope.changePage = function(change){
   if(change === 'next' && $scope.users.length === 10){
     $scope.page += 1;
@@ -70,6 +70,9 @@ angular.module('recruitr')
   Profile.find()
   .then(function(response){
     $scope.students = response.data.students;
+    if($scope.students === 10){
+      $scope.moveForward = true;
+    }
   });
   console.log('in ProfilesListCtrl');
 });

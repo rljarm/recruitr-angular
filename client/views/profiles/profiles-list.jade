@@ -27,7 +27,7 @@ h3 LIST PROFILES
             td(ng-if=''): button.btn.btn-warning
 .row
   .col-xs-1
-    button.btn.btn-info(ng-show='', ng-click='changePage(prev)', ng-model='prev') Prev
+    button.btn.btn-info(ng-show='moveBack', ng-click='changePage(prev)', ng-model='prev') Prev
   .col-xs-10
   .col-xs-1
-    button.btn.btn-info(ng-show='', ng-click='changePage(next)', ng-model='next') Next
+    button.btn.btn-info(ng-show='moveForward', ng-click='changePage(next)', ng-model='next') Next
