@@ -6,9 +6,9 @@
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-3.3.4-blue.svg)
 
 ### Team
-[Chyld Medford](https://github.com/chyld)
-[Dick Armstrong-Stoner](https://github.com/rljarm)
-[Edwin Dover](https://github.com/Edsdover)
-[Jess Leivers](https://github.com/SarahJessica)
-[Jon Edwards](https://github.com/kolohelios)
+[Chyld Medford](https://github.com/chyld)  
+[Dick Armstrong-Stoner](https://github.com/rljarm)  
+[Edwin Dover](https://github.com/Edsdover)  
+[Jess Leivers](https://github.com/SarahJessica)  
+[Jon Edwards](https://github.com/kolohelios)  
 [Tania Leonian](https://github.com/tania531)
