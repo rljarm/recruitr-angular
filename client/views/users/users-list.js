@@ -1,6 +1,9 @@
 'use strict';
 
 angular.module('recruitr')
-.controller('UsersListCtrl', function(){
-  console.log('in UsersListCtrl');
+.controller('UsersListCtrl', function($scope, User){
+  User.find()
+  .then(function(response){
+    $scope.users = response.data.users;
+  });
 });

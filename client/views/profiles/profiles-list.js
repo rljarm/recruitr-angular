@@ -48,7 +48,7 @@ angular.module('recruitr')
 ];
   Profile.find()
   .then(function(response){
-    $scope.trips = response.data.trips;
+    $scope.students = response.data.students;
   });
   console.log('in ProfilesListCtrl');
 });
