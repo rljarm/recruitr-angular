@@ -1,7 +1,7 @@
 //#profile-padding
 .container#profile-show
   .row
-    .col-xs-12col-sm-8.col-md-7.col-md-push-7
+    .col-xs-12col-sm-8.col-md-6.col-md-push-4
       h1.showName {{student.firstName}} {{student.lastName}}
       .col-xs-12.col-sm-6
         h5 Skills
@@ -11,12 +11,17 @@
         h5 Exposure
         ul
           li(ng-repeat="exposure in student.exposure") {{exposure}}
-    .hidden-xs.col-sm-offset-1.col-sm-2.col-md-offset-1.col-md-3.col-md-pull-7
+    .hidden-xs.col-sm-2.col-md-4.col-md-pull-6
       img(src='{{student.photo}}')
+    .col-xs-12.col-md-2
+      .controlPanel(ng-if='activeUser.role===10')
+        h5 Control Panel
+        button.btn.btn-warning(ng-click='deleteStudent(student)') Delete
+        button.btn.btn-info(ng-click='editStudent(student)') Edit
   .row
     .col-xs-12.col-md-5.col-md-push-4
-      p &nbsp; 
-      h5 {{student.bio}}
+      p &nbsp;
+      h5.bio {{student.bio}}
     .col-xs-12.col-md-4.col-md-pull-5
       h5 Location Pereferences
       p Location: {{student.location}}
@@ -27,10 +32,10 @@
     .col-xs-12.col-md-3
       h5 Interests
       p(ng-repeat="interest in student.interests") {{interest}}
-  .row  
+  .row
     .col-xs-12.col-md-8.col-md-push-4
       h5 Education
-        p(ng-repeat="edu in student.education") {{edu}}
+      p(ng-repeat="edu in student.education") {{edu}}
     .col-xs-12.col-md-4.col-md-pull-8
       h5 Contact Information
       p
