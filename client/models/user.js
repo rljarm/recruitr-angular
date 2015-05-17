@@ -22,9 +22,9 @@ angular.module('recruitr')
     return $http.get(nodeUrl + '/users');
   };
 
-  User.deleteStudent = function(student){
-    return $http.delete(nodeUrl + '/users/' + student._id);
-  }
+  User.deleteUser = function(user){
+    return $http.delete(nodeUrl + '/users/' + user._id);
+  };
 
   return User;
 });
