@@ -88,4 +88,10 @@ angular.module('recruitr')
       $scope.students = response.data.students;
     });
   };
+  $scope.sortByName = function(name){
+    Profile.sortByName(name);
+  };
+  $scope.sortBySkills = function(skill){
+    Profile.sortsortBySkills(skill);
+  };
 });
