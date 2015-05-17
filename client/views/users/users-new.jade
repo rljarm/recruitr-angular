@@ -26,8 +26,8 @@ h3 NEW USER
       .form-group
         label: h6(for='type') User Type
         select.form-control.login#type(name='type', ng-model='user.role')
-          option(value='0' selected) viewer
-          option(value='5') superviewer
-          option(value='10') admin
+          option(value='0' selected) Viewer
+          option(value='5') Super Viewer
+          option(value='10') Admin
       .form-group
         button.btn.btn-success.login#createUser(ng-click='create(user)') Create New User
