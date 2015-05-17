@@ -2,7 +2,7 @@
 
 angular.module('recruitr')
 .constant('firebaseUrl', 'https://kolohelios-auth.firebaseio.com')
-.constant('nodeUrl', 'http://localhost:8000')
+.constant('nodeUrl', ' http://192.168.1.42:8000')
 .constant('fauxProfiles',
 [
   {
