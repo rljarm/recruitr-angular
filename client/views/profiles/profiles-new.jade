@@ -2,7 +2,7 @@ h3 NEW PROFILE
 .row
   .col-xs-12
     h4: i.fa.fa-user-plus &nbsp; BASIC INFO
-  .col-xs-12.col-sm-6
+  .col-xs-12.col-sm-4
     .form-group
       label: h6(for='firstName') First Name
       input.form-control#firstName(type='text', ng-model='student.firstName')
@@ -12,16 +12,26 @@ h3 NEW PROFILE
     .form-group
       label: h6(for='website') Website
       input.form-control#website(type='url', ng-model='student.website')
-  .col-xs-12.col-sm-6
+  .col-xs-12.col-sm-4
     .form-group
-      label: h6(for='linkedin') LinkedIn
-      input.form-control#linkedin(type='url', ng-model='student.linkedin')
+      label: h6(for='phone') Phone
+      input.form-control#phone(type='tel', ng-model='student.phone')
     .form-group
       label: h6(for='github') GitHub
       input.form-control#github(type='url', ng-model='student.github')
     .form-group
       label: h6(for='stackoverflow') StackOverflow
       input.form-control#stackoverflow(type='url', ng-model='student.stackoverflow')
+  .col-xs-12.col-sm-4
+    .form-group
+      label: h6(for='linkedin') LinkedIn
+      input.form-control#linkedin(type='url', ng-model='student.linkedin')
+    .form-group
+      label: h6(for='twitter') Twitter
+      input.form-control#github(type='url', ng-model='student.twitter')
+    .form-group
+      label: h6(for='email') Email
+      input.form-control#email(type='email', ng-model='student.email')
 .row
   .col-xs-12
     h4: i.fa.fa-map-marker &nbsp; LOCATION PREFERENCES
@@ -184,6 +194,9 @@ h3 NEW PROFILE
         option Diagramming
         option Model Engineering
         option Bash
+    .form-group Education
+      label: h6(for='education')
+      textarea.form-control#education(type='textarea', ng-model='student.education')
 .row
   .col-xs-12
   .col-xs-12.col-xs-6
