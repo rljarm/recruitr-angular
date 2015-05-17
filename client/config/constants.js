@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('recruitr')
-.constant('nodeUrl', 'http://localhost:8000')
+.constant('nodeUrl', 'http://192.168.1.42:8000')
 .constant('fauxUsers',
 [
   {
