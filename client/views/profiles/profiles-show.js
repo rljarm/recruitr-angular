@@ -1,11 +1,13 @@
 'use strict';
 
 angular.module('recruitr')
-.controller('ProfilesShowCtrl', function($scope, $rootScope, fauxProfiles, Profile){
+.controller('ProfilesShowCtrl', function($scope, $rootScope, fauxProfiles, Profile, $state){
   console.log('in ProfilesShowCtrl');
-
-  $scope.student = fauxProfiles[0];
-
+  var studentId = $state.params.studentId;
+  Profile.findStudent(studentId)
+  .then(function(response){
+    $scope.student = response.data.student;
+  });
 
   $scope.editStudent = function(student){
     Profile.editStudent(student)
