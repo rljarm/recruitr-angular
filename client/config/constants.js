@@ -7,57 +7,37 @@ angular.module('recruitr')
 [
   {
     _id: 'b00000000000000000000001',
-<<<<<<< HEAD
-    email: 'aaa@aaa.com',
-    password: 'aaa',
-=======
     name: 'Dick Armstrong-Stoner',
     company: 'Coding House',
     email: 'rljarm@gmail.com',
     firebaseId: 'twitter:3',
->>>>>>> 16f591365163dd01ed14a3ca144909c97ea2a875
     createdAt: 1431541042952,
     role: 'viewer'
   },
   {
     _id: 'b00000000000000000000002',
-<<<<<<< HEAD
-    email: 'bbb@bbb.com',
-    password: 'bbb',
-=======
     name: 'Jon Edwards',
     company: 'Coding House',
     email: 'jkedwards@me.com',
     firebaseId: 'facebook:5',
->>>>>>> 16f591365163dd01ed14a3ca144909c97ea2a875
     createdAt: 1431541109988,
     role: 'viewer'
   },
   {
     _id: 'b00000000000000000000003',
-<<<<<<< HEAD
-    email: 'ccc@ccc.com',
-    password: 'ccc',
-=======
     name: 'Cris Oyler',
     company: 'Coding House',
     email: 'co@gmail.com',
     firebaseId: 'facebook:6',
->>>>>>> 16f591365163dd01ed14a3ca144909c97ea2a875
     createdAt: 1431541109988,
     role: 'superviewer'
   },
   {
     _id: 'b00000000000000000000004',
-<<<<<<< HEAD
-    email: 'ddd@ddd.com',
-    password: 'ddd',
-=======
     name: 'Clyde Marl',
     company: 'Coding House',
     email: 'cm@gmail.com',
     firebaseId: 'facebook:7',
->>>>>>> 16f591365163dd01ed14a3ca144909c97ea2a875
     createdAt: 1431541109988,
     role: 'admin'
   }
