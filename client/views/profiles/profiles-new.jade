@@ -94,139 +94,17 @@ h3 NEW PROFILE
     h4: i.fa.fa-suitcase &nbsp;SKILLS AND EXPOSURE
   .col-xs-12.col-sm-6
     .form-group
-      label: h6(for='skills1') Skill
-      select.form-control#skill1(ng-model='student.skills.skill1')
-        option Angular
-        option Node
-        option Mongodb
-        option HTML5
-        option CSS3
-        option Git
-        option jQuery
-        option Version Control
-        option noSQL
-        option Pair Programming
-        option Firebase
-        option Javascript
-        option TDD
-        option Leadership
-        option Diagramming
-        option Model Engineering
-        option Bash
-    .form-group
-      label: h6(for='skills2') Skill
-      select.form-control#skill2(ng-model='student.skills.skill2')
-        option Angular
-        option Node
-        option Mongodb
-        option HTML5
-        option CSS3
-        option Git
-        option jQuery
-        option Version Control
-        option noSQL
-        option Pair Programming
-        option Firebase
-        option Javascript
-        option TDD
-        option Leadership
-        option Diagramming
-        option Model Engineering
-        option Bash
-    .form-group
-      label: h6(for='skills3') Skill
-      select.form-control#skill3(ng-model='student.skills.skill3')
-        option Angular
-        option Node
-        option Mongodb
-        option HTML5
-        option CSS3
-        option Git
-        option jQuery
-        option Version Control
-        option noSQL
-        option Pair Programming
-        option Firebase
-        option Javascript
-        option TDD
-        option Leadership
-        option Diagramming
-        option Model Engineering
-        option Bash
+      label: h6(for='skills') Skill
+      textarea.form-control#skills(type='textarea', ng-model='student.skills', ng-keyup="$event.keyCode == 13 ? submit(user) : null")
   .col-xs-12.col-sm-6
     .form-group
-      label: h6(for='skills4') Skill
-      select.form-control#skill4(ng-model='student.skills.skill4')
-        option Angular
-        option Node
-        option Mongodb
-        option HTML5
-        option CSS3
-        option Git
-        option jQuery
-        option Version Control
-        option noSQL
-        option Pair Programming
-        option Firebase
-        option Javascript
-        option TDD
-        option Leadership
-        option Diagramming
-        option Model Engineering
-        option Bash
-    .form-group
-      label: h6(for='skills5') Skill
-      select.form-control#skill5(ng-model='student.skills.skill5')
-        option Angular
-        option Node
-        option Mongodb
-        option HTML5
-        option CSS3
-        option Git
-        option jQuery
-        option Version Control
-        option noSQL
-        option Pair Programming
-        option Firebase
-        option Javascript
-        option TDD
-        option Leadership
-        option Diagramming
-        option Model Engineering
-        option Bash
-    .form-group Education
-      label: h6(for='education')
-      textarea.form-control#education(type='textarea', ng-model='student.education')
+      label: h6(for='education') Education
+      textarea.form-control#education(type='textarea', ng-model='student.education', ng-keyup="$event.keyCode == 13 ? submit(user) : null")
 .row
   .col-xs-12
   .col-xs-12.col-xs-6
-    .form-group
-      label: h6(for='exposure1') Exposure
-      input.form-control#exposure1(type='text', ng-model='student.exposure.exposure1', ng-keyup="$event.keyCode == 13 ? submit(student) : null")
-    .form-group
-      label: h6(for='exposure2') Exposure
-      input.form-control#exposure2(type='text', ng-model='student.exposure.exposure2',, ng-keyup="$event.keyCode == 13 ? submit(student) : null")
-    .form-group
-      label: h6(for='exposure3') Exposure
-      input.form-control#exposure3(type='text', ng-model='student.exposure.exposure3', ng-keyup="$event.keyCode == 13 ? submit(student) : null")
-    .form-group
-      label: h6(for='exposure4') Exposure
-      input.form-control#exposure4(type='text', ng-model='student.exposure.exposure4', ng-keyup="$event.keyCode == 13 ? submit(student) : null")
-    .form-group
-      label: h6(for='exposure5') Exposure
-      input.form-control#exposure5(type='text', ng-model='student.exposure.exposure5', ng-keyup="$event.keyCode == 13 ? submit(student) : null")
-  .col-xs-12.col-xs-6
-    .form-group
-      label: h6(for='exposure6') Exposure
-      input.form-control#exposure6(type='text', ng-model='student.exposure.exposure6', ng-keyup="$event.keyCode == 13 ? submit(student) : null")
-    .form-group
-      label: h6(for='exposure7') Exposure
-      input.form-control#exposure7(type='text', ng-model='student.exposure.exposure7', ng-keyup="$event.keyCode == 13 ? submit(student) : null")
-    .form-group
-      label: h6(for='exposure8') Exposure
-      input.form-control#exposure8(type='text', ng-model='student.exposure.exposure8', ng-keyup="$event.keyCode == 13 ? submit(student) : null")
-    .form-group
-      label: h6(for='exposure9') Exposure
-      input.form-control#exposure9(type='text', ng-model='student.exposure.exposure9', ng-keyup="$event.keyCode == 13 ? submit(student) : null")
+    .form-group Education
+      label: h6(for='exposure') Exposure
+      textarea.form-control#exposure(type='textarea', ng-model='student.exposure', ng-keyup="$event.keyCode == 13 ? submit(user) : null")
     .form-group
       button.btn.btn-info(ng-click='create(student)') Create Student

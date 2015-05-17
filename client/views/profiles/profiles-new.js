@@ -7,24 +7,8 @@ angular.module('recruitr')
         firstName: $scope.student.firstName,
         lastName: $scope.student.lastName,
         photo: $scope.student.photo,
-        skills: [
-          $scope.student.skill1,
-          $scope.student.skill2,
-          $scope.student.skill3,
-          $scope.student.skill4,
-          $scope.student.skill5
-        ],
-        exposure: [
-          $scope.student.exposure1,
-          $scope.student.exposure2,
-          $scope.student.exposure3,
-          $scope.student.exposure4,
-          $scope.student.exposure5,
-          $scope.student.exposure6,
-          $scope.student.exposure7,
-          $scope.student.exposure8,
-          $scope.student.exposure9
-        ],
+        skills: $scope.student.skills,
+        exposure: $scope.student.exposure,
         bio: $scope.student.blurb,
         location: $scope.student.location,
         interests: [
