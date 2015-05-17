@@ -17,9 +17,9 @@ h3 NEW USER
       .form-group
         label: h6(for='email') Email
         input.form-control.login#email(type='email', name='email', ng-model='user.email') 
-      .form-group
-        label: h6(for='position') Company Position
-        input.form-control.login#position(type='text', name='position', ng-model='user.position' placeholder='Recruiter, CTO, ect')
+      //- .form-group
+      //-   label: h6(for='position') Company Position
+      //-   input.form-control.login#position(type='text', name='position', ng-model='user.position' placeholder='Recruiter, CTO, ect')
       .form-group
         label: h6(for='type') User Access Type
         select.form-control.login#type(name='type', ng-model='user.role')

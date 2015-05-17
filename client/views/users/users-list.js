@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('recruitr')
-.controller('UsersListCtrl', function($scope, User){
+.controller('UsersListCtrl', function($scope, User, $window){
   $scope.page = 1;
   $scope.moveBack = false;
   $scope.moveForward = false;
@@ -55,7 +55,14 @@ angular.module('recruitr')
   $scope.deleteUser = function(user){
     User.deleteUser(user)
     .then(function(response){
-      $scope.users = response.data.users;
+      console.log(response);
+      $window._.remove($scope.users, function(user){
+        return user._id === response.data._id;
+      });
+      // User.find()
+      // .then(function(response){
+      //   $scope.users = response.data.users;
+      // });
     });
   };
 });
