@@ -100,11 +100,10 @@ h3 NEW PROFILE
     .form-group
       label: h6(for='education') Education
       textarea.form-control#education(type='textarea', ng-model='student.education', ng-keyup="$event.keyCode == 13 ? submit(user) : null")
-.row
-  .col-xs-12
-  .col-xs-12.col-xs-6
-    .form-group Education
+  .col-xs-12.col-sm-6
+    .form-group
       label: h6(for='exposure') Exposure
       textarea.form-control#exposure(type='textarea', ng-model='student.exposure', ng-keyup="$event.keyCode == 13 ? submit(user) : null")
+  .col-xs-12.col-sm-6
     .form-group
-      button.btn.btn-success#createStudent(ng-click='create(student)') Create Student
+      button.btn-lg.btn-success#createStudent(ng-click='create(student)') Create Student
