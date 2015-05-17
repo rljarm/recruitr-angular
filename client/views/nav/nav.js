@@ -1,13 +1,10 @@
 'use strict';
 
 angular.module('recruitr')
-.controller('NavCtrl', function($rootScope, $scope, $state, $http, User){
-  function goHome(){
-    $state.go('home');
-  }
-
+.controller('NavCtrl', function($rootScope, $scope, $state, $http){
   $scope.logout = function(){
-    User.logout();
-    goHome();
+    $http.defaults.headers.common.Authorization = null;
+    $rootScope.activeUser = null;
+    $state.go('home');
   };
 });
