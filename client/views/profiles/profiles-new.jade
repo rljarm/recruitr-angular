@@ -216,4 +216,4 @@ h3 NEW PROFILE
       label: h6(for='exposure9') Exposure
       input.form-control#exposure9(type='text', ng-model='student.exposure.exposure9', ng-keyup="$event.keyCode == 13 ? submit(student) : null")
     .form-group
-      button.btn.btn-info(ng-click='create(student)') Create Student
+      button.btn.btn-success#createStudent(ng-click='create(student)') Create Student
