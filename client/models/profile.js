@@ -10,6 +10,9 @@ angular.module('recruitr')
   Profile.save = function(student){
     return $http.post(nodeUrl + '/profiles', student);
   };
+  Profile.findStudent = function(studentId){
+    return $http.get(nodeUrl + '/profiles', studentId);
+  };
 
   return Profile;
 });
