@@ -1,6 +1,7 @@
 'use strict';
 
 angular.module('recruitr')
+
 .constant('nodeUrl', 'http://192.168.1.42:8000')
 .constant('fauxUsers',
 [
@@ -42,7 +43,6 @@ angular.module('recruitr')
   }
 ]
 )
-
 .constant('fauxProfiles',
 [
   {
@@ -53,7 +53,7 @@ angular.module('recruitr')
     createdAt: 1431541042952,
     skills: ['Joi', 'Hapi', 'Node'],
     exposure: ['Selenium', 'QA', 'Java', 'Python'],
-    bio: 'Developer A',
+    bio: 'Developer A; this is some extra text to make it the full 3 sentences. Tumblr polaroid Odd Future, before they sold out photo booth bespoke heirloom put a bird on it wolf dreamcatcher banjo Neutra swag hashtag. Bicycle rights artisan pickled scenester readymade Thundercats, Williamsburg skateboard deep v Blue Bottle umami cronut next level. ',
     location: 'San Jose, CA',
     interests: ['Soccer', 'Football', 'Tennis'],
     remote: true,
