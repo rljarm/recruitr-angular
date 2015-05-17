@@ -19,8 +19,12 @@ angular.module('recruitr')
   };
 
   User.find = function(){
-    // something here
+    return $http.get(nodeUrl + '/users');
   };
+
+  User.deleteStudent = function(student){
+    return $http.delete(nodeUrl + '/users/' + student._id);
+  }
 
   return User;
 });
