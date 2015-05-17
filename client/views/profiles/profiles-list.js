@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('recruitr')
-.controller('ProfilesListCtrl', function($scope, $rootScope, Profile){
+.controller('ProfilesListCtrl', function($scope, $rootScope, Profile, $state){
   $scope.page = 1;
   $scope.moveBack = false;
   $scope.moveForward = false;
@@ -47,5 +47,8 @@ angular.module('recruitr')
   };
   $scope.sortBySkills = function(skill){
     Profile.sortsortBySkills(skill);
+  };
+  $scope.profileGo = function(student){
+    $state.go('profiles.show', {studentId: student._id});
   };
 });
