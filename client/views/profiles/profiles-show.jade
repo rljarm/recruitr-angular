@@ -1,8 +1,8 @@
-#profile-padding  
-  h3 SHOW PROFILE
+//#profile-padding
+.container#profile-show
   .row
-    .col-xs-12.col-sm-offset-1.col-sm-8.col-md-offset-2.col-md-7
-      h2 {{student.firstName}} {{student.lastName}}
+    .col-xs-12col-sm-8.col-md-7.col-md-push-7
+      h1.showName {{student.firstName}} {{student.lastName}}
       .col-xs-12.col-sm-6
         h5 Skills
         ul
@@ -11,21 +11,27 @@
         h5 Exposure
         ul
           li(ng-repeat="exposure in student.exposure") {{exposure}}
-    .col-xs-12.col-sm-2.col-md-2
+    .hidden-xs.col-sm-offset-1.col-sm-2.col-md-offset-1.col-md-3.col-md-pull-7
       img(src='{{student.photo}}')
-    .col-xs-12
-      h5 Blurb
-      {{bio}}
-    .col-xs-12
-      h5 location
-      p(ng-repeat="location in student.locationPref") {{location}}
-    .col-xs-12
-      h5 Education
-      p(ng-repeat="edu in student.education") {{edu}}
-    .col-xs-12
+  .row
+    .col-xs-12.col-md-5.col-md-push-4
+      p &nbsp; 
+      h5 {{student.bio}}
+    .col-xs-12.col-md-4.col-md-pull-5
+      h5 Location Pereferences
+      p Location: {{student.location}}
+      p(ng-show="{{student.relocate}}"): i.fa.fa-check &nbsp; Willing to relocate
+      p(ng-show="{{student.remote}}"): i.fa.fa-check &nbsp; Willing to work remotely
+      h5 Open to opportunities in:
+      p(ng-repeat="location in student.locationPref"): {{location}}
+    .col-xs-12.col-md-3
       h5 Interests
       p(ng-repeat="interest in student.interests") {{interest}}
-    .col-xs-12
+  .row  
+    .col-xs-12.col-md-8.col-md-push-4
+      h5 Education
+        p(ng-repeat="edu in student.education") {{edu}}
+    .col-xs-12.col-md-4.col-md-pull-8
       h5 Contact Information
       p
         i.fa.fa-envelope: a(mailto="{{contat.contact.email}}") &nbsp; email
