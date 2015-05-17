@@ -1,6 +1,7 @@
 'use strict';
 
 angular.module('recruitr')
+<<<<<<< HEAD
 .constant('nodeUrl', 'http://192.168.1.42:8000')
 .constant('fauxUsers',
 [
@@ -43,6 +44,10 @@ angular.module('recruitr')
 ]
 )
 
+=======
+.constant('firebaseUrl', 'https://kolohelios-auth.firebaseio.com')
+.constant('nodeUrl', ' http://192.168.1.42:8000')
+>>>>>>> 8aaf534f0ce09d91caa454b2a6e26784c2fede01
 .constant('fauxProfiles',
 [
   {
