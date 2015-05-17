@@ -189,31 +189,31 @@ h3 NEW PROFILE
   .col-xs-12.col-xs-6
     .form-group
       label: h6(for='exposure1') Exposure
-      input.form-control#exposure1(type='text', ng-model='student.exposure.exposure1')
+      input.form-control#exposure1(type='text', ng-model='student.exposure.exposure1', ng-keyup="$event.keyCode == 13 ? submit(student) : null")
     .form-group
       label: h6(for='exposure2') Exposure
-      input.form-control#exposure2(type='text', ng-model='student.exposure.exposure2')
+      input.form-control#exposure2(type='text', ng-model='student.exposure.exposure2',, ng-keyup="$event.keyCode == 13 ? submit(student) : null")
     .form-group
       label: h6(for='exposure3') Exposure
-      input.form-control#exposure3(type='text', ng-model='student.exposure.exposure3')
+      input.form-control#exposure3(type='text', ng-model='student.exposure.exposure3', ng-keyup="$event.keyCode == 13 ? submit(student) : null")
     .form-group
       label: h6(for='exposure4') Exposure
-      input.form-control#exposure4(type='text', ng-model='student.exposure.exposure4')
+      input.form-control#exposure4(type='text', ng-model='student.exposure.exposure4', ng-keyup="$event.keyCode == 13 ? submit(student) : null")
     .form-group
       label: h6(for='exposure5') Exposure
-      input.form-control#exposure5(type='text', ng-model='student.exposure.exposure5')
+      input.form-control#exposure5(type='text', ng-model='student.exposure.exposure5', ng-keyup="$event.keyCode == 13 ? submit(student) : null")
   .col-xs-12.col-xs-6
     .form-group
       label: h6(for='exposure6') Exposure
-      input.form-control#exposure6(type='text', ng-model='student.exposure.exposure6')
+      input.form-control#exposure6(type='text', ng-model='student.exposure.exposure6', ng-keyup="$event.keyCode == 13 ? submit(student) : null")
     .form-group
       label: h6(for='exposure7') Exposure
-      input.form-control#exposure7(type='text', ng-model='student.exposure.exposure7')
+      input.form-control#exposure7(type='text', ng-model='student.exposure.exposure7', ng-keyup="$event.keyCode == 13 ? submit(student) : null")
     .form-group
       label: h6(for='exposure8') Exposure
-      input.form-control#exposure8(type='text', ng-model='student.exposure.exposure8')
+      input.form-control#exposure8(type='text', ng-model='student.exposure.exposure8', ng-keyup="$event.keyCode == 13 ? submit(student) : null")
     .form-group
       label: h6(for='exposure9') Exposure
-      input.form-control#exposure9(type='text', ng-model='student.exposure.exposure9')
+      input.form-control#exposure9(type='text', ng-model='student.exposure.exposure9', ng-keyup="$event.keyCode == 13 ? submit(student) : null")
     .form-group
       button.btn.btn-info(ng-click='create(student)') Create Student
