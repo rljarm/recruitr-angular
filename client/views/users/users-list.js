@@ -1,8 +1,7 @@
 'use strict';
 
 angular.module('recruitr')
-.controller('UsersListCtrl', function($scope, User, fauxUsers){
-  $scope.users = fauxUsers;
+.controller('UsersListCtrl', function($scope, User){
   $scope.page = 1;
   $scope.moveBack = false;
   $scope.moveForward = false;

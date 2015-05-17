@@ -41,13 +41,16 @@ h3 NEW PROFILE
       input.form-control#location(type='text', ng-model='student.location')
     .form-group
       label: h6(for='preferedLocation1') First Preferred Location
-      input.form-control#preferedLocation1(type='text', ng-model='student.preferedLocation.preferedLocation1')
+      select.form-control#preferedLocation1(type='text', ng-model='student.preferedLocation.preferedLocation1')
+        option(ng-repeat='place in msa') {{place}}
     .form-group
       label: h6(for='preferedLocation2') Second Preferred Location
-      input.form-control#preferedLocation2(type='text', ng-model='student.preferedLocation.preferedLocation2')
+      select.form-control#preferedLocation2(type='text', ng-model='student.preferedLocation.preferedLocation2')
+        option(ng-repeat='place in msa') {{place}}
     .form-group
       label: h6(for='preferedLocation3') Third Perferred Location
-      input.form-control#preferedLocation1(type='text', ng-model='student.preferedLocation.preferedLocation3')
+      select.form-control#preferedLocation1(type='text', ng-model='student.preferedLocation.preferedLocation3')
+        option(ng-repeat='place in msa') {{place}}
   .col-xs-4.col-sm-2
     .form-group
       label: h6(for='relocation') Willing to relocate?

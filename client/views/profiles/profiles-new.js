@@ -1,7 +1,9 @@
 'use strict';
 
 angular.module('recruitr')
-.controller('ProfilesNewCtrl', function($scope, Profile, $state){
+.controller('ProfilesNewCtrl', function($scope, Profile, $state, msaList){
+  $scope.msa = msaList;
+
   $scope.create = function(){
     var student = {
         firstName: $scope.student.firstName,
