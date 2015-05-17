@@ -107,4 +107,4 @@ h3 NEW PROFILE
       label: h6(for='exposure') Exposure
       textarea.form-control#exposure(type='textarea', ng-model='student.exposure', ng-keyup="$event.keyCode == 13 ? submit(user) : null")
     .form-group
-      button.btn.btn-info(ng-click='create(student)') Create Student
+      button.btn.btn-success#createStudent(ng-click='create(student)') Create Student
