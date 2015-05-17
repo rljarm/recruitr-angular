@@ -25,7 +25,7 @@ angular.module('recruitr')
 };
   Profile.find()
   .then(function(response){
-    $scope.students = response.data.students;
+    $scope.students = response.data.profiles;
     if($scope.students === 10){
       $scope.moveForward = true;
     }
