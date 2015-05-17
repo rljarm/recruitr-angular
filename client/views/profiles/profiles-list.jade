@@ -36,7 +36,8 @@ h3 LIST PROFILES
             td: img.photo(ng-src='{{student.photo}}')
             td {{student.firstName}}
             td(ng-if='') {{student.lastName}}
-            td {{student.skills}}
+            td: ul 
+              li(ng-repeat='skill in student.skills') {{skill}}
             td {{student.location}}
             td(ng-if=''): button.btn.btn-warning(ng-click='editStudent(student)')
             td(ng-if=''): button.btn.btn-warning(ng-click='deleteStudent(student)')
