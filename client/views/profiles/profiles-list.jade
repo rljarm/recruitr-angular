@@ -9,13 +9,13 @@ h3 LIST PROFILES
       label(for='sortBySkills') &nbsp;
       button.form-control.btn.btn-info(name='sortBySkills', ng-click='sortBySkills(sortSkills)') Sort
   .col-xs-12.col-sm-2
-    .form-group(ng-if='')
+    .form-group(ng-if='activeUser.role > 0')
       label(for='sortName') Sort by name
       select.form-control(ng-model='sortName', name='sortName')
         option(value='firstName') firstName
         option(value='lastName') lastName
   .col-xs-12.col-sm-2
-    .form-group(ng-if='')
+    .form-group(ng-if='activeUser.role > 0')
       label(for='sortByName') &nbsp;
       button.form-control.btn.btn-info(name='sortByName', ng-click='sortByName(sortName)') Sort
 .row
@@ -26,21 +26,21 @@ h3 LIST PROFILES
           tr
             th Photo
             th First Name
-            th(ng-if='') Last Name
+            th(ng-if='activeUser.role > 0') Last Name
             th Skills
             th Location
-            th(ng-if='') Edit
-            th(ng-if='') Delete
+            th(ng-if='activeUser.role===10') Edit
+            th(ng-if='activeUser.role===10') Delete
         tbody
           tr(ng-repeat='student in students', ng-click='profileGo(student)')
             td: img.photo(ng-src='{{student.photo}}')
             td {{student.firstName}}
-            td(ng-if='') {{student.lastName}}
+            td(ng-if='activeUser.role > 0') {{student.lastName}}
             td: ul 
               li(ng-repeat='skill in student.skills') {{skill}}
             td {{student.location}}
-            td(ng-if=''): button.btn.btn-warning(ng-click='editStudent(student)')
-            td(ng-if=''): button.btn.btn-warning(ng-click='deleteStudent(student)')
+            td(ng-if='activeUser.role===10'): button.btn.btn-warning(ng-click='editStudent(student)') Edit
+            td(ng-if='activeUser.role===10'): button.btn.btn-danger(ng-click='deleteStudent(student)') Delete
 .row
   .col-xs-1
     button.btn.btn-info(ng-show='moveBack', ng-click='changePage(prev)', ng-model='prev') Prev
