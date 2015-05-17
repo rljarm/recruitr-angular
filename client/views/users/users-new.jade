@@ -19,8 +19,14 @@ h3 NEW USER
         label: h6(for='password1') Password
         input.form-control.login#password1(type='password', name='password1', ng-model='user.password1')
       .form-group
-        label: h6(for='password2') Password
+        label: h6(for='password2') Password Validation
         input.form-control.login#password2(type='password', name='password2', ng-model='user.password2', ng-keyup="$event.keyCode == 13 ? submit(user) : null")
+      .form-group
+        label: h6(for='type') User Type
+        select.form-control.login#type(name='type', ng-model='user.role')
+          option(value='0' selected) viewer
+          option(value='5') superviewer
+          option(value='10') admin
 .row
   .col-xs-4.col-xs-offset-1
       .form-group
