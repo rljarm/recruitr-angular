@@ -19,7 +19,11 @@ angular.module('recruitr')
   };
 
   User.find = function(){
-    // something here
+    return $http.get(nodeUrl + '/users');
+  };
+
+  User.deleteUser = function(user){
+    return $http.delete(nodeUrl + '/users/' + user._id);
   };
 
   return User;
