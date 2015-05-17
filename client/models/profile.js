@@ -11,7 +11,7 @@ angular.module('recruitr')
     return $http.post(nodeUrl + '/profiles', student);
   };
   Profile.findStudent = function(studentId){
-    return $http.get(nodeUrl + '/profiles', studentId);
+    return $http.get(nodeUrl + '/profiles/' + studentId);
   };
 
   return Profile;
