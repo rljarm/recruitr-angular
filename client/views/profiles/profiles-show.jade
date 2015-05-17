@@ -1,7 +1,13 @@
 //#profile-padding
 .container#profile-show
   .row
-    .col-xs-12col-sm-8.col-md-6.col-md-push-4
+    .col-xs-6
+      p: a(ng-src='prev()'): i.fa.fa-caret-left &nbsp; PREVIOUS
+    .col-xs-6
+      p.right-btn-float: a(ng-src='next()') NEXT &nbsp;
+        span: i.fa.fa-caret-right
+  .row
+    .col-xs-12.col-sm-8.col-md-6.col-md-push-4
       h1.showName {{student.firstName}} {{student.lastName}}
       .col-xs-12.col-sm-6
         h5 Skills
@@ -9,8 +15,9 @@
           li(ng-repeat="skill in student.skills") {{skill}}
       .col-xs-12.col-sm-6
         h5 Exposure
-        ul
-          li(ng-repeat="exposure in student.exposure") {{exposure}}
+        span(ng-repeat="exposure in student.exposure")
+          span {{exposure}}
+          span(ng-if='!($last)') |
     .hidden-xs.col-sm-2.col-md-4.col-md-pull-6
       img(src='{{student.photo}}')
     .col-xs-12.col-md-2
