@@ -23,7 +23,8 @@ angular.module('recruitr')
   };
 
   User.deleteUser = function(user){
-    return $http.delete(nodeUrl + '/users/' + user._id);
+    console.log(user)
+    // return $http.delete(nodeUrl + '/users/' + user._id);
   };
 
   return User;
