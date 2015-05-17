@@ -55,6 +55,7 @@ angular.module('recruitr')
   $scope.deleteUser = function(user){
     User.deleteUser(user)
     .then(function(response){
+      console.log(response.data);
       $scope.users = response.data.users;
     });
   };
