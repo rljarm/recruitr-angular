@@ -13,7 +13,7 @@ h3 LIST USERS
             th(ng-if='') Delete
         tbody
           tr(ng-repeat='user in users')
-            td {{user.name}}
+            td {{user.firstName}} {{user.lastName}}
             td {{user.company}}
             td {{user.email}}
             td {{user.role}}

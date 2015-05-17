@@ -26,7 +26,23 @@ angular.module('recruitr')
   };
   User.find()
   .then(function(response){
-    $scope.users = response.data.users;
+    console.log(response);
+    $scope.users = response.data;
+    $scope.users = $scope.users.map(function(user){
+      var roleName;
+      switch(user.role){
+        case 0:
+          roleName = 'Viewer';
+          break;
+        case 5:
+          roleName = 'Super Viewer';
+        break;
+        case 10:
+          roleName = 'Admin';
+      }
+      user.role = roleName
+      return user;
+    });
     if($scope.users === 10){
       $scope.moveForward = true;
     }

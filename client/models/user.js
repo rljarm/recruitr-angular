@@ -19,7 +19,7 @@ angular.module('recruitr')
   };
 
   User.find = function(){
-    // something here
+    return $http.get(nodeUrl + '/users');
   };
 
   return User;
