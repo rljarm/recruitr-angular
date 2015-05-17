@@ -1,8 +1,9 @@
 h3 NEW USER
 
 .row
-  .col-xs-4.col-xs-offset-1
+  .col-xs-12
     form(name='userForm', novalidate)
+  .col-xs-12.col-sm-4.col-sm-offset-2
       .form-group
         label: h6(for='firstName') First Name
         input.form-control.login#firstName(type='text', name='firstName', ng-model='user.firstName')
@@ -15,6 +16,7 @@ h3 NEW USER
       .form-group
         label: h6(for='email') Email
         input.form-control.login#email(type='email', name='email', ng-model='user.email')
+  .col-xs-12.col-sm-4
       .form-group
         label: h6(for='password1') Password
         input.form-control.login#password1(type='password', name='password1', ng-model='user.password1')
@@ -24,10 +26,8 @@ h3 NEW USER
       .form-group
         label: h6(for='type') User Type
         select.form-control.login#type(name='type', ng-model='user.role')
-          option(value='0' selected) viewer
-          option(value='5') superviewer
-          option(value='10') admin
-.row
-  .col-xs-4.col-xs-offset-1
+          option(value='0' selected) Viewer
+          option(value='5') Super Viewer
+          option(value='10') Admin
       .form-group
         button.btn.btn-success.login#createUser(ng-click='create(user)') Create New User
