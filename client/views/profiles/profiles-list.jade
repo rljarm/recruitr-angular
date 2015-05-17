@@ -23,11 +23,11 @@ h3 LIST PROFILES
             td {{student.exposure.exposure1}}
             td {{student.exposure.exposure2}}
             td {{student.exposure.exposure3}}
-            td(ng-if=''): button.btn.btn-warning
-            td(ng-if=''): button.btn.btn-warning
+            td(ng-if=''): button.btn.btn-warning(ng-click='editStudent(student)')
+            td(ng-if=''): button.btn.btn-warning(ng-click='deleteStudent(student)')
 .row
   .col-xs-1
-    button.btn.btn-info(ng-show='') Prev
+    button.btn.btn-info(ng-show='moveBack', ng-click='changePage(prev)', ng-model='prev') Prev
   .col-xs-10
   .col-xs-1
-    button.btn.btn-info(ng-show='') Next
+    button.btn.btn-info(ng-show='moveForward', ng-click='changePage(next)', ng-model='next') Next

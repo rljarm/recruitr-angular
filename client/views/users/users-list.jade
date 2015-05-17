@@ -1,4 +1,4 @@
-h3 LIST PROFILES
+h3 LIST USERS
 .row
   .col-sm-12
     .table-responsive
@@ -9,19 +9,19 @@ h3 LIST PROFILES
             th Company
             th Email
             th User Type
-            th Edit
-            th Delete
+            th(ng-if='') Edit
+            th(ng-if='') Delete
         tbody
           tr(ng-repeat='user in users')
             td {{user.name}}
             td {{user.company}}
             td {{user.email}}
             td {{user.role}}
-            td: button.btn.btn-warning Edit
-            td: button.btn.btn-warning Delete
+            td(ng-if=''): button.btn.btn-sm.btn-warning(ng-click='editUser(user)') Edit
+            td(ng-if=''): button.btn.btn-sm.btn-Danger(ng-click='deleteUser(user)') Delete
 .row
   .col-xs-1
-    button.btn.btn-info(ng-show='', ng-click='changePage(prev)', ng-model='prev') Prev
+    button.btn.btn-info(ng-show='moveBack', ng-click='changePage("prev")') Prev
   .col-xs-10
   .col-xs-1
-    button.btn.btn-info(ng-show='', ng-click='changePage(next)', ng-model='next') Next
+    button.btn.btn-info(ng-show='moveForward', ng-click='changePage("next")') Next

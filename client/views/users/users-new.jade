@@ -15,8 +15,13 @@ h3 NEW USER
       .form-group
         label: h6(for='email') Email
         input.form-control.login#email(type='email', name='email', ng-model='user.email')
+      .form-group
+        label: h6(for='password1') Password
+        input.form-control.login#password1(type='password', name='password1', ng-model='user.password1')
+      .form-group
+        label: h6(for='password2') Password
+        input.form-control.login#password2(type='password', name='password2', ng-model='user.password2')
 .row
   .col-xs-4.col-xs-offset-1
       .form-group
         button.btn.btn-success.login#createUser(ng-click='create(user)') Create New User
-
