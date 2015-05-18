@@ -86,12 +86,9 @@ angular.module('recruitr')
           stackoverflow: $scope.student.stackoverflow
         }
       };
-    console.log(student);
-    console.log('$scope.student', $scope.student);
     Profile.save(student)
     .then(function(){
       $state.go('profiles.list');
     });
   };
-  console.log('in ProfilesNewCtrl');
 });
