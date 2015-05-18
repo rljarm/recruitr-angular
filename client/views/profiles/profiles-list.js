@@ -31,10 +31,7 @@ angular.module('recruitr')
     }
   });
   $scope.editStudent = function(student){
-    Profile.editStudent(student)
-    .then(function(response){
-      $scope.students = response.data.students;
-    });
+    $state.go('profiles.edit', {profileId: student._id});
   };
   $scope.deleteStudent = function(student){
     Profile.deleteStudent(student)

@@ -20,5 +20,6 @@ angular.module('recruitr')
   .state('profiles', {url: '/profiles', templateUrl: '/views/profiles/profiles.html', abstract: true})
   .state('profiles.list', {url: '/', templateUrl: '/views/profiles/profiles-list.html', controller: 'ProfilesListCtrl'})
   .state('profiles.new', {url: '/new', templateUrl: '/views/profiles/profiles-new.html', controller: 'ProfilesNewCtrl'})
-  .state('profiles.show', {url: '/{studentId}', templateUrl: '/views/profiles/profiles-show.html', controller: 'ProfilesShowCtrl'});
+  .state('profiles.show', {url: '/{studentId}', templateUrl: '/views/profiles/profiles-show.html', controller: 'ProfilesShowCtrl'})
+  .state('Profiles.edit', {url: '/edit/{profileId}', templateUrl: '/views/profiles/profiles-new.html', controller: 'ProfilesNewCtrl'});
 });

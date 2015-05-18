@@ -2,6 +2,30 @@
 
 angular.module('recruitr')
 .controller('ProfilesNewCtrl', function($scope, Profile, $state, msaList){
+  function checkState(){
+    if($state.params.profileId){
+      $scope.isEdit = true;
+      Profile.findOne($state.params.profileId)
+      .then(function(response){
+        $scope.student = response.data;
+      });
+    }
+  }
+
+  $scope.edit = function(obj){
+    var o = angular.copy(obj);
+    delete o.__v;
+    delete o.$$hashkey;
+    delete o.createdAt;
+    delete o.password;
+    delete o._id;
+    Profile.edit(o, obj._id)
+    .then(function(){
+      $state.go('profiles.list');
+    });
+  };
+
+  checkState();
   $scope.msa = msaList;
   var forHire;
   var remote;

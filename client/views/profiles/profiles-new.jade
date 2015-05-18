@@ -1,4 +1,6 @@
-h3 NEW PROFILE
+h3(ng-hide='isEdit') NEW USER
+h3(ng-show='isEdit') EDIT USER
+
 .row
   .col-xs-12
     h4: i.fa.fa-user-plus &nbsp; BASIC INFO
@@ -108,5 +110,7 @@ h3 NEW PROFILE
       label: h6(for='exposure') Exposure
       textarea.form-control#exposure(type='textarea', ng-model='student.exposure', ng-keyup="$event.keyCode == 13 ? submit(user) : null")
   .col-xs-12.col-sm-6
-    .form-group
-      button.btn-lg.btn-success#createStudent(ng-click='create(student)') Create Developer
+    .form-group(ng-hide='isEdit')
+      button.btn.btn-success.login#createUser(ng-click='create(student)') Create Developer
+    .form-group(ng-show='isEdit')
+      button.btn.btn-success.login#createUser(ng-click='edit(user)') Save Edit

@@ -13,6 +13,12 @@ angular.module('recruitr')
   Profile.findStudent = function(studentId){
     return $http.get(nodeUrl + '/profiles/' + studentId);
   };
+  Profile.findOne = function(profileId){
+    return $http.get(nodeUrl + '/profiles/' + profileId);
+  };
+  Profile.edit = function(profile, profileId){
+    return $http.put(nodeUrl + '/profiles/' + profileId, profile);
+  };
 
   return Profile;
 });
