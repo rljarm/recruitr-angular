@@ -42,11 +42,11 @@ h3 NEW PROFILE
     .form-group
       label: h6(for='preferedLocation1') First Preferred Location
       select.form-control#preferedLocation1(type='text', ng-model='student.preferedLocation.preferedLocation1')
-        option(ng-repeat='place in msa') {{place}}
+        option(ng-repeat='place in msa' value='{{place}}') {{place}}
     .form-group
       label: h6(for='preferedLocation2') Second Preferred Location
-      select.form-control#preferedLocation2(type='text', ng-model='student.preferedLocation.preferedLocation2')
-        option(ng-repeat='place in msa') {{place}}
+      select.form-control#preferedLocation2(ng-model='student.preferedLocation.preferedLocation2')
+        option(ng-repeat='place in msa', value='{{place}}') {{place}}
     .form-group
       label: h6(for='preferedLocation3') Third Perferred Location
       select.form-control#preferedLocation1(type='text', ng-model='student.preferedLocation.preferedLocation3')
@@ -97,7 +97,7 @@ h3 NEW PROFILE
     h4: i.fa.fa-suitcase &nbsp;SKILLS AND EXPOSURE
   .col-xs-12.col-sm-6
     .form-group
-      label: h6(for='skills') Skill
+      label: h6(for='skills') Skills
       textarea.form-control#skills(type='textarea', ng-model='student.skills', ng-keyup="$event.keyCode == 13 ? submit(user) : null")
   .col-xs-12.col-sm-6
     .form-group
@@ -109,4 +109,4 @@ h3 NEW PROFILE
       textarea.form-control#exposure(type='textarea', ng-model='student.exposure', ng-keyup="$event.keyCode == 13 ? submit(user) : null")
   .col-xs-12.col-sm-6
     .form-group
-      button.btn-lg.btn-success#createStudent(ng-click='create(student)') Create Student
+      button.btn-lg.btn-success#createStudent(ng-click='create(student)') Create Developer
