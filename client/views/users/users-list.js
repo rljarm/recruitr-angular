@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('recruitr')
-.controller('UsersListCtrl', function($scope, User, $window){
+.controller('UsersListCtrl', function($scope, User, $window, $state){
   $scope.page = 1;
   $scope.moveBack = false;
   $scope.moveForward = false;
@@ -47,10 +47,9 @@ angular.module('recruitr')
     }
   });
   $scope.editUser = function(user){
-    User.editUser(user)
-    .then(function(response){
-      $scope.users = response.data.users;
-    });
+    console.log(user);
+    // $state.go('houses.edit', {houseId: $state.params.houseId})
+    $state.go('users.edit', {userId: user._id});
   };
   $scope.deleteUser = function(user){
     User.deleteUser(user)
@@ -59,10 +58,6 @@ angular.module('recruitr')
       $window._.remove($scope.users, function(user){
         return user._id === response.data._id;
       });
-      // User.find()
-      // .then(function(response){
-      //   $scope.users = response.data.users;
-      // });
     });
   };
 });

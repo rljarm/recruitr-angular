@@ -3,9 +3,38 @@
 angular.module('recruitr')
 .controller('UsersNewCtrl', function($scope, User, $state, $window){
   console.log('in UsersNewCtrl');
+  $scope.isEdit = false;
+  console.log($state.params);
 
+  function checkState(){
+    if($state.params.userId){
+      $scope.isEdit = true;
+      User.findOne($state.params.userId)
+      .then(function(response){
+        $scope.user = response.data;
+      });
+    }
+  }
+
+  checkState();
+
+  $scope.edit = function(obj){
+    console.log('before copy', obj._id);
+    var o = angular.copy(obj);
+    console.log('copy ID', o._id);
+    delete o.__v;
+    delete o.$$hashkey;
+    delete o.createdAt;
+    delete o.password2;
+    o.password = o.password1;
+    delete o.password1;
+    delete o._id;
+    User.edit(o, obj._id)
+    .then(function(){
+      $state.go('users.list');
+    });
+  };
   $scope.create = function(obj){
-    // var user = new User(obj);
     if($scope.user.password1 === $scope.user.password2){
       obj.password = $scope.user.password1;
       delete obj.password1;
