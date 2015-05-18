@@ -15,7 +15,7 @@ angular.module('recruitr')
   }
   Profile.find($scope.page)
   .then(function(response){
-    $scope.users = response.data.users;
+    $scope.users = response.data.profile;
   });
   if($scope.page === 1){
     $scope.moveBack = false;
@@ -26,7 +26,7 @@ angular.module('recruitr')
   Profile.find()
   .then(function(response){
     $scope.students = response.data.profiles;
-    if($scope.students === 10){
+    if($scope.students.length === 10){
       $scope.moveForward = true;
     }
   });
